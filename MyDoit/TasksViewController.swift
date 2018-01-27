@@ -42,7 +42,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         // step 8
         if task.important {
-            cell.textLabel?.text = "!\(task.name)"
+            cell.textLabel?.text = "❗️\(task.name)"
         } else {
             cell.textLabel?.text = task.name
         }
@@ -70,6 +70,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         performSegue(withIdentifier: "addSegue", sender: nil)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as!CreateTaskViewController
+        nextVC.previousVC = self
+    }
 }
 
