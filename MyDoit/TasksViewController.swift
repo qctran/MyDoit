@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TasksViewController.swift
 //  MyDoit
 //
 //  Created by Conan Tran on 1/22/18.
@@ -9,7 +9,7 @@
 import UIKit
 
 // step 2
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     // step 3
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // step 7
         return tasks.count
     }
     
@@ -39,6 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // step 6
         let task = tasks[indexPath.row]
         
+        // step 8
         if task.important {
             cell.textLabel?.text = "!\(task.name)"
         } else {
@@ -67,6 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func plusTap(_ sender: Any) {
         performSegue(withIdentifier: "addSegue", sender: nil)
     }
+    
     
 }
 
