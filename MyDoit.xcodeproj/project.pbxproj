@@ -15,6 +15,7 @@
 		4878A7B62017034400B6E85D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4878A7B42017034400B6E85D /* LaunchScreen.storyboard */; };
 		4878A7BE20199CBE00B6E85D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878A7BD20199CBE00B6E85D /* Task.swift */; };
 		4878A7C2201CF48D00B6E85D /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878A7C1201CF48D00B6E85D /* CreateTaskViewController.swift */; };
+		4895FA7A201CFE3200CCBBDB /* CompleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895FA79201CFE3200CCBBDB /* CompleteTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4878A7B72017034400B6E85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4878A7BD20199CBE00B6E85D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		4878A7C1201CF48D00B6E85D /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		4895FA79201CFE3200CCBBDB /* CompleteTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4878A7A82017034400B6E85D /* AppDelegate.swift */,
 				4878A7AA2017034400B6E85D /* TasksViewController.swift */,
 				4878A7C1201CF48D00B6E85D /* CreateTaskViewController.swift */,
+				4895FA79201CFE3200CCBBDB /* CompleteTaskViewController.swift */,
 				4878A7AC2017034400B6E85D /* Main.storyboard */,
 				4878A7B22017034400B6E85D /* Assets.xcassets */,
 				4878A7B42017034400B6E85D /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			files = (
 				4878A7BE20199CBE00B6E85D /* Task.swift in Sources */,
 				4878A7AB2017034400B6E85D /* TasksViewController.swift in Sources */,
+				4895FA7A201CFE3200CCBBDB /* CompleteTaskViewController.swift in Sources */,
 				4878A7B12017034400B6E85D /* MyDoit.xcdatamodeld in Sources */,
 				4878A7A92017034400B6E85D /* AppDelegate.swift in Sources */,
 				4878A7C2201CF48D00B6E85D /* CreateTaskViewController.swift in Sources */,
@@ -313,6 +317,7 @@
 				4878A7BC2017034400B6E85D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

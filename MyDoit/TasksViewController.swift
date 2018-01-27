@@ -10,10 +10,11 @@ import UIKit
 
 // step 2
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var tasks : [Task] = []
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
     }
-
+    
     // step 3
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // step 7
@@ -49,7 +50,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         return cell
     }
-
+    
     func makeTasks() -> [Task] {
         let task1 = Task()
         task1.name = "Walk the cat"
@@ -66,13 +67,31 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return [task1, task2, task3]
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // For deletion use
+        selectedIndex = indexPath.row
+        
+        let temp = tasks[indexPath.row]
+        performSegue(withIdentifier: "selectTaskSegue", sender: temp)
+    }
+    
     @IBAction func plusTap(_ sender: Any) {
         performSegue(withIdentifier: "addSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextVC = segue.destination as!CreateTaskViewController
-        nextVC.previousVC = self
+        if segue.identifier == "addSegue"{
+            
+            let nextVC = segue.destination as!CreateTaskViewController
+            nextVC.previousVC = self
+        }
+        
+        if segue.identifier == "selectTaskSegue"{
+            let completeVC = segue.destination as!CompleteTaskViewController
+            completeVC.task = sender as! Task
+            // For back VC ref.
+            completeVC.previousVC = self
+        }
     }
 }
 
